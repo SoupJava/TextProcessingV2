@@ -656,7 +656,7 @@ def TencentView(request):
         nonce = data.get(key='nonce', default='')
         echostr = data.get(key='echostr', default='')
     # 请按照公众平台官网\基本配置中信息填写
-        token = 'JavaSoup123'	
+        token = 'xxxxxxxx'	
         list_para = [token, timestamp, nonce]
         list_para.sort()
         list_str = ''.join(list_para).encode('utf-8')
@@ -699,4 +699,5 @@ def TencentView(request):
             # print(recMsg.FromUserName)
             # print(str(recMsg.Content))
             replyMsg = TextMsg(toUser, fromUser, content)
+
             return HttpResponse(content=replyMsg.send())
